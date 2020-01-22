@@ -45,13 +45,6 @@ CREATE TABLE car_images (
   image VARCHAR(255)
 );
 
-CREATE TABLE ratings (
-  id SERIAL PRIMARY KEY NOT NULL,
-  user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
-  rating INTEGER,
-  comment TEXT
-);
-
 CREATE TABLE messages (
   id SERIAL PRIMARY KEY NOT NULL,
   user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
